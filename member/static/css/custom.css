@@ -1,0 +1,9 @@
+.order-form {
+    display: inline-block;
+}
+.item{
+	display: block;
+	border:none;
+	background:transparent;
+	margin: auto;
+}

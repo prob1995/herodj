@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us" class="js flexbox flexboxlegacy">
+
+<head>
+		{% load staticfiles %}
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Lunch for your needs</title>
+		<meta name="description" content="Tab Styles Inspiration: A small collection of styles for tabs">
+		<meta name="keywords" content="tabs, inspiration, web design, css, modern, effects, svg">
+		<meta name="author" content="Codrops">
+		<link rel="shortcut icon" href="{% static '../favicon.ico' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/demo.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/tabs.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/tabstyles.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+  		<script src="{% static 'js/modernizr.custom.js' %}"></script>
+  		<script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+  		<script src="//www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+  		<script type="text/javascript" src="{% static 'js/parse.member.js' %}"></script>
+</head>
+
+<!--member.html only-->
+<script type="text/javascript">
+Parse.initialize("PsSTVABlQBtQDn1C7vqoxvJ2FOMMtHW8K4JKrID5", "CgbN1iS39bjPtIKVzkUgV2DQhAWJB5nWvaxly4gg");
+var currentUser = Parse.User.current();
+if (currentUser) {
+	// do stuff with the user
+	}
+  else {
+	  // show the signup or login page
+	  alert('請登入啦！');
+	  window.location = "../";
+	}
+</script>
+<body>
+<div class="container">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="#/"><span>About</span></a>
+				<span class="right"><a class="codrops-icon codrops-icon-drop" href="../" onclick="logOut()"><span>Log Out</span></a></span>
+			</div>
+			
+	<section>
+		<div class="tabs tabs-style-topline">
+			<nav>
+				<ul>
+<!--					<li class="tab-current"><a href="#section-topline-1" class="icon icon-home"><span>Sign Up</span></a></li>-->	
+<!--					<li><a href="#section-topline-2" class="icon icon-gift"><span>Log In</span></a></li>-->	
+					<li><a href="#section-topline-3" class="icon icon-upload"><span>Store</span></a></li>
+<!--					<li><a href="#section-topline-4" class="icon icon-coffee"><span>Work</span></a></li>-->	
+					<li><a href="#section-topline-5" class="icon icon-config"><span>Order</span></a></li>
+				
+				</ul>
+			</nav>
+			<div class="content-wrap">
+<!--				<section id="section-topline-1" class="content-current">
+					<p>Sign Up</p>
+			  		<form class="register-form" name= "register-form">
+					電子信箱:  <input type=text name="email" id="email"></br></br>
+					公司統編:  <input type=text name="companyId" id="companyId"></br></br>
+					密碼:  <input type=password name="password" id="password"></br></br>
+					<input type="button" value="Sign Up!" onclick="sign()" />
+					</form>
+				</section> -->
+					
+<!--				<section id="section-topline-2">
+					<p>Log In</p>
+					電子信箱:  <input type=text name="Lemail" id="Lemail"></br></br>
+					密碼:  <input type=password name="Lpassword" id="Lpassword"></br></br>
+					<input type="button" value="Log In!" onclick="logIn()" />
+				</section> -->
+
+				<section id="section-topline-3"><p>Store</p></section>
+<!--			<section id="section-topline-4"><p>4</p></section> -->	
+				<section id="section-topline-5">
+					<p>List</p>
+					<form class="order-form" name= "order-form">
+						<input type=text name="order-item" size="16">
+					</form>
+					<button type="button" id="add-button">add</button>
+					</br>
+					</br>
+					<form class="list"></form>
+					</br>
+					<input type="button" value="送出" onclick="submit()" />
+					<!--<button type="button" id="submit-button" onclick="submit()">submit</button>-->
+					</section>
+			</div><!-- /content -->
+		</div><!-- /tabs -->
+	</section>
+			
+</div>
+</body>
+<script src="{% static 'js/cbpFWTabs.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+
+</html>
