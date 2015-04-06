@@ -1,37 +1,25 @@
+Deploy to Heroku:
+    Create venv
+    activate venv
+    install django-toolbet
+    create Procfile
+    create requirments.txt
+    modify settings.py and wsgi.py
+    add something to .gitignore
+    create static folder in djtest/ and add one any file (usually .dir)
+    git it
+    heroku it
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
-
-
-Welcome to your Django project on Cloud9 IDE!
-
-Your Django project is already fully setup. Just click the "Run" button to start
-the application. On first run you will be asked to create an admin user. You can
-access your application from 'https://djtest-polin.c9.io/' and the admin page from 
-'https://djtest-polin.c9.io/admin'.
-
-## Starting from the Terminal
-
-In case you want to run your Django application from the terminal just run:
-
-1) Run syncdb command to sync models to database and create Django's default superuser and auth system
-
-    $ python manage.py syncdb
-
-2) Run Django
-
-    $ python manage.py runserver $IP:$PORT
+    or visit
+    https://devcenter.heroku.com/articles/getting-started-with-django
     
-## Support & Documentation
+    if you want re heroku it, use code below to remove previous heroku git. 
+    git remote rm heroku
+    
+For Cloud9 test:
+    Go to djtest/settings.py and djtest/wsgi.py 
+    mark #FOR HEROKU DEPLOY 
 
-Django docs can be found at https://www.djangoproject.com/
-
-You may also want to follow the Django tutorial to create your first application:
-https://docs.djangoproject.com/en/1.7/intro/tutorial01/
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+For Heroku deploy:
+    Go to djtest/settings.py and djtest/wsgi.py 
+    unmark #FOR HEROKU DEPLOY # herodj
